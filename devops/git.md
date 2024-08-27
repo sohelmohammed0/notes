@@ -109,10 +109,15 @@
       - Branches are used for create another line of development, features and the deafult branch is `master`
       - To create a branch:
         ----> git branch <branch name>
+        ----> git checkout -b <branch name>
+        ----> git checkout -b <branch name> <commit id>
       - To del branch
-        ----> git branch -d <branch name to be deleted>
+        ----> git branch -d <branch name to be deleted> - to del merged branches
       - Force del
-        ----> git branch -D <branch name to be deleted>
+        ----> git branch -D <branch name to be deleted> - to del unmerged branches
+        * To del a remote branch
+        ----> git push -d <remote name> <branch name>
+        ----> git push <remote name>:<branch name>
       - To create and checkout a branch
         ----> git checkout -b <give a branch name>
       - Comparing local branch with remote
@@ -241,7 +246,22 @@
 
 1. Gitlab CI/CD
 
-1. Branching and stashing
+1. Branching and stashing:
+
+BENIFITS OF BRANCHING
+---------------------
+   1. Revolutionary feature of Git - Distinguishes from other VCS
+   2. Lightweight, Operations over git branches are very fast - Switching back and forth
+   3. Faciliates faster Development and code merging
+
+GIT STORAGE STRATEGY - OBJECTS
+------------------------------
+
+1. BLOB
+2. TREE
+3. COMMIT
+4. TAG
+
    - Branches allows us to work on other features
    - They can be included with the main line of the project
    - The mian branch - the one where all the changes eventually get merged back into, and is called master
@@ -257,3 +277,45 @@
 12. Git merge vs git rebase
 13. Jenkins git integration
 14. Web hooks Jenkins
+
+* CICD :
+
+INRRODUCTION TO CICD
+--------------------
+
+* Cons:
+    1. Reduce errors in code
+    2. Speeds up coding process
+    3. Integrates code steamlessly
+
+* CI - Continous Integration
+* CD - Continous Delivery
+* Continous Deployment
+
+* Why CICD?
+    1. Increase speed of operation
+    2. Communication between teams
+    3. Regular feedback
+    4. Frequent Development Cycles
+    5. Easier Detection of errors
+    6. Quicker recovery
+    7. Better efficiency
+
+* CICD - pipeline:
+    1. Initiates code builds
+    2. Run tests
+    3. Staging Production Environments
+
+1. Commit - New codes are integrated to the base code
+2. Build - Source code is converted in to an executable form
+3. Test - Checks the interaction between builds and if app is working
+4. Deploy - Deploys the app to production environment
+
+GIT-LAB:
+
+* To use GITLAB we need:
+    1. Application codebase hosted on GITHUB
+    2. Sequentially defined scripts in YAML file
+    3. YAML file in the path of root repo
+    4. Name of file `.gitlab-ci.yml`
+
