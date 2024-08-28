@@ -95,7 +95,6 @@
       ----> git config --list
 
 1. Commands:
-
    1. git init - This turns a dir in to empty git repo
    2. git add <file name> - add the files to the staging area
    3. git rm --cached <file name> - to unstage the changes
@@ -318,4 +317,3 @@ GIT-LAB:
     2. Sequentially defined scripts in YAML file
     3. YAML file in the path of root repo
     4. Name of file `.gitlab-ci.yml`
-
